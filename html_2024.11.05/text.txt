@@ -26,3 +26,13 @@ git servers
     GitLab (solo user - no register)
     Bitbucket (Atlassian)
 
+comands VSCode
+
+Alt + Z
+Ctrl + /
+Ctrl + C
+Ctrl + V
+Ctrl + Z
+Ctrl + Shift + Z (Ctrl + Y)
+Alt + Shift + стрелка вниз
+Alt + стрелка вниз / вверх
