@@ -1,0 +1,16 @@
+cmd
+cd - изменить деррикторию в терминале
+ls / dir (win) - посмотреть все файлы и папки в текущей дирректории
+. - текущая папка
+.. - выйти на уровень вверх
+~ - направляет курсор терминала в папку пользователя
+
+git
+    git init - делает паку работающей под VCS (git)
+    git add "file" - добавить файл к новому коммиту (git add .) (git add file1 file2 folder3)
+    git commit -m "message" - создает коммит
+
+git servers
+    GitHub 
+    GitLab (solo user - no register)
+    Bitbucket (Atlassian)
