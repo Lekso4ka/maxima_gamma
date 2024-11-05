@@ -10,7 +10,19 @@ git
     git add "file" - добавить файл к новому коммиту (git add .) (git add file1 file2 folder3)
     git commit -m "message" - создает коммит
 
+    перед первым коммитом
+        git config --global user.email "u@ya.ru"
+        git config --global user.name "user"
+
+        git config --local user.email "u@ya.ru"
+        git config --local user.name "user"
+
+    git log - показывает все ранние коммиты (для выхода из лога нажать кнопку q)
+    git checkout -b name - создает новую ветку с именем name и переходит в нее
+    git checkout name - переходит в ветку с именем name (если она уже создана)
+
 git servers
     GitHub 
     GitLab (solo user - no register)
     Bitbucket (Atlassian)
+
