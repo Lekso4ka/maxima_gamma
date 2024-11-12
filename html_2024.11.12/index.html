@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Блочные и строчные теги</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, iste perspiciatis id dolorem sit nemo vero
+        autem suscipit dolores atque nostrum error saepe odit voluptatibus, et minima quis doloremque aut.</p>
+
+    <!-- Так делать нельзя!!! -->
+    <a href="">
+        <h2>текст</h2>
+    </a>
+
+    <!-- Так делать можно и нужно -->
+    <h2><a href="">текст</a></h2>
+    <!-- 
+        дом
+            /человек
+            квартира
+                комната
+                    шкаф
+                        /свитер
+                        коробка
+                            /свитер
+                            коробка
+                                /свитер
+                    /человек
+                        -дом
+                        /свитер
+                    /свитер
+                        -шкаф
+                /человек
+    -->
+
+    <!-- 
+        div - division (раздел) - универсальный блочный тег
+
+            <div id="header"></div> => <header></header>
+            <div id="footer"></div> => <footer></footer>
+        span - свободное пространство - универсальный строчный тег
+     -->
+    <div></div>
+    <span></span>
+    <!-- 
+        Строчные теги
+            теги со смыслом     тег для красоты
+            strong              b                   высокая важность / полужирное начертание
+            em                  i                   обратить внимание / курсивное начертание
+            ins                 u
+            del 
+            mark
+            small
+            sup
+            sub
+    -->
+
+    <h2>Ресурсы</h2>
+    <!-- ul>li*6>a -->
+    <ul>
+        <li><a href="https://www.w3schools.com/tags/default.asp">W3School теги</a></li>
+        <li><a href="https://www.w3schools.com/tags/ref_attributes.asp">W3School атрибуты</a></li>
+        <li><a href="https://html5book.ru/html-html5/">html5book.ru</a></li>
+        <li><a href=""></a>Я забыла что тут</li>
+        <li><a href="https://developer.mozilla.org/ru/">Самый важный ресурс!</a></li>
+        <li><a href="https://validator.w3.org/">Validator</a></li>
+    </ul>
+
+    <h2>
+        Списки
+    </h2>
+    <!-- 
+        Списки:
+            - упорядоченные (нумерованные)
+            - неупорядоченные (маркированные)
+    -->
+            <h4>Стать FE developer</h4>
+            <ol> <!-- order list - упорядоченный список-->
+                <li>Пройти курс по HTML
+                    <ol>
+                        <li>Выучить теги</li>
+                        <li>Выучить css</li>
+                    </ol>
+                </li> <!-- элемент списка -->
+                <li>Пройти курс JavaScript</li>
+                <li>Познакомиться с Гуру</li>
+                <li>Найти работу</li>
+            </ol>
+            <h4>Список продуктов</h4>
+            <ul> <!-- unordered list-->
+                <li>Чипсы</li>
+                <li>Молоко</li>
+                <li>Яйца</li>
+                <li>Пива</li>
+                <li>Сыр</li>
+                <li>Хлеб</li>
+            </ul>
+
+    <h2>Строчные теги</h2>
+    <p>
+        Колонки для ПК: <del>3000₽</del> <ins>1500$</ins>
+    </p>
+    <p>
+        x<sup>e<sup>x<sup>2</sup></sup></sup>
+        <br>
+        log<sub>n</sub>4
+    </p>
+    <p>
+        Lorem <em>ip<mark>s</mark>um</em> dolor <b>sit amet</b> consectetur adipisicing elit. Et hic exercitationem, dolores reprehenderit eos sint quaerat libero quas <i>volu<strong>iptates</strong></i> explicabo se<small><mark>qui</mark></small> molestiae necessitatibus dicta odio consequatur fugiat qui totam vero saepe molestias maxime officia! Magnam deserunt veritatis in quidem earum.
+    </p>
+</body>
+
+</html>
