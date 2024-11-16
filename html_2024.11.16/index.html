@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 5</title>
+    <style>
+        td, th {
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <h2>Фреймы</h2>
+    <!-- 
+        img
+        iframe
+        video
+        audio
+            можно использовать width & height
+    -->
+    <iframe src="https://yandex.ru/map-widget/v1/?ll=37.553773%2C55.715351&z=17.17" width="560" height="400"></iframe>
+
+    <iframe src="https://wikipedia.org" width="100%" height="300"></iframe>
+
+    <h2>Таблицы</h2>
+    <table>
+        <thead>
+            <!-- tr - table row -->
+            <tr>
+                <!-- td - table data (ячейка) -->
+                <!-- th - table headding (заголовочная ячейка) -->
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- tr*2>td*3 -->
+            <tr>
+                <td>строка 1 / 1</td>
+                <td>string 1 / 2</td>
+                <td>=)</td>
+            </tr>
+            <tr>
+                <td>first</td>
+                <td>second</td>
+                <td>third</td>
+            </tr>
+        </tbody>
+        <!-- <tfoot></tfoot> -->
+    </table>
+
+    <table>
+        <caption>Таблица успеваемости</caption>
+        <thead>
+            <tr>
+                <th>имя</th>
+                <th>год</th>
+                <th>оценка за HTML</th>
+                <th>оценка за JS</th>
+                <th>оценка за REACT</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Александр</th>
+                <td>2000</td>
+                <td>хор</td>
+                <td>отл</td>
+                <td>хор</td>
+            </tr>
+            <tr>
+                <th>Иванов Иван</th>
+                <td>1999</td>
+                <td>отл</td>
+                <td>отл</td>
+                <td>отл</td>
+            </tr>
+            <tr>
+                <th>Алексей</th>
+                <td>1981</td>
+                <td>отл</td>
+                <td>хор</td>
+                <td>удов</td>
+            </tr>
+            <tr>
+                <th>Руслан</th>
+                <td>1998</td>
+                <td>удов</td>
+                <td>хор</td>
+                <td>хор</td>
+            </tr>
+            <tr>
+                <th>Тамара</th>
+                <td>1979</td>
+                <td>отл</td>
+                <td>удов</td>
+                <td>неуд</td>
+            </tr>
+            <tr>
+                <th>Аюб</th>
+                <td>1999</td>
+                <td>отл</td>
+                <td>отл</td>
+                <td>отл</td>
+            </tr>
+        </tbody>
+    </table>
+    <table>
+        <caption>Таблица успеваемости update</caption>
+        <thead>
+            <tr>
+                <th rowspan="2">имя</th>
+                <th rowspan="2">год</th>
+                <th colspan="3">оценка</th>
+            </tr>
+            <tr>
+                <th>HTML&CSS</th>
+                <th>JavaScript</th>
+                <th>React</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Александр</th>
+                <td>2000</td>
+                <td>хор</td>
+                <td>отл</td>
+                <td>хор</td>
+            </tr>
+            <tr>
+                <th>Иванов Иван</th>
+                <td>1999</td>
+                <td>отл</td>
+                <td>отл</td>
+                <td>отл</td>
+            </tr>
+            <tr>
+                <th>Алексей</th>
+                <td>1981</td>
+                <td>отл</td>
+                <td>хор</td>
+                <td>удов</td>
+            </tr>
+            <tr>
+                <th>Руслан</th>
+                <td>1998</td>
+                <td>удов</td>
+                <td>хор</td>
+                <td>хор</td>
+            </tr>
+            <tr>
+                <th>Тамара</th>
+                <td>1979</td>
+                <td>отл</td>
+                <td>
+                    <div>удов</div>
+                </td>
+                <td>
+                    <mark>неуд</mark>
+                </td>
+            </tr>
+            <tr>
+                <th>Аюб</th>
+                <td>1999</td>
+                <td>отл</td>
+                <td>отл</td>
+                <td>отл</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

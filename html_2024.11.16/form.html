@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Формы</title>
+</head>
+<!-- 
+    для формирования интерфейса - html/css
+    для проверки корректност заполнения формы - JavaScript
+    для отправки информации (работы формы) нужен !!!сервер!!! (node.js / php / python / java / c# / go)
+-->
+<body>
+    <h2>Форма заказа телефона</h2>
+    <!-- 
+        label
+        input - единственный кандидат
+            type - что за данные будет вводить пользователь
+            name - название поля
+            placeholder - подсказка пользователю
+        
+        button
+        select
+        fieldset -> legend
+    -->
+    <form action="" method="GET">
+        <!-- <input type="password" name="" id=""> -->
+        <div>Ваше имя 
+            <input 
+                type="text"
+                name="user"
+                placeholder="Михаил"
+            >
+        </div>
+        <div>Ваш email
+            <input 
+                type="email"
+                name="mail"
+                placeholder="user@name.ru"
+            >
+        </div>
+        <div>Ваш телефон
+            <input 
+                type="tel"
+                name="phone"
+            >
+        </div>
+        
+        <!-- http://127.0.0.1:5500/html_2024.11.16/form.html?user=Michael&mail=mih%40cool.com&phone=1234567 -->
+   
+        <fieldset>
+            <legend>Адрес доставки</legend>
+            <div><label>Индекс <input type="number" name="index"></div></label>
+            <div>Город 
+                <select name="city">
+                    <option value="Kz">Казань</option>
+                    <!-- <option>Ростов-на-Дону</option> -->
+                    <option value="St">Сыктывкар</option>
+                    <option value="Ts">Томск</option>
+                </select>
+            </div>
+            <div>Улица <input type="text" name="street"></div>
+            <div>Дом <input type="text" name="house" maxlength="5"></div>
+            <div>Квартира 
+                <input 
+                    type="number"
+                    name="flat"
+                    min="1"
+                    max="20"
+                    step="0.01"
+                >
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Параметры заказа</legend>
+            <div>Выберите марку</div>
+            <ul>
+                <li>
+                    <label><input type="radio" name="phone" value="Samsung"> Samsung</label>
+                </li>
+                <li>
+                    <labeL><input type="radio" name="phone" value="Huawey"> Huawey</labeL>
+                </li>
+                <li>
+                    <label><input type="radio" name="phone" value="Xiaomi" checked> Xiaomi</label>
+                </li>
+            </ul>
+            <!-- <div>Размер жесткого диска</div> -->
+            <div>Выберите опции</div>
+            <!-- ul>li*3>label>input -->
+            <ul>
+                <li><label>
+                    <input type="checkbox" name="opt1" value="case" checked>
+                    Чехольчик
+                </label></li>
+                <li><label>
+                    <input type="checkbox" name="opt2" value="glass" checked>
+                    Защитное стекло
+                </label></li>
+                <li><label>
+                    <input type="checkbox" name="opt3" value="sim" checked>
+                    Установка SIM
+                </label></li>
+            </ul>
+        </fieldset>
+        <h3>Комментарии к заказу</h3>
+        <div><textarea name="message" rows="10" cols="40" placeholder="Укажите что еще надо сделать"></textarea></div>
+        <!-- <input type="button"> -->
+        <!-- <input type="reset"> -->
+        <!-- <input type="submit" value="Заказать"> -->
+        <button>Заказать</button>
+    </form>
+</body>
+</html>

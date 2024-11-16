@@ -20,7 +20,9 @@ git
     git log - показывает все ранние коммиты (для выхода из лога нажать кнопку q)
     git checkout -b name - создает новую ветку с именем name и переходит в нее
     git checkout name - переходит в ветку с именем name (если она уже создана)
-
+    git clone "путь" - скопировать репозиторий с github
+    git pull - сгружает обновления с github на текущий компьютер
+    
 git servers
     GitHub 
     GitLab (solo user - no register)
