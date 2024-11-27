@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 6. Основы CSS</title>
+    <style>
+        /* * - универсальный селектор - применяет стили для всех тегов, которые есть на html-странице и у которых нет других похожих заданных стилей */
+        
+        * {
+            /* color: forestgreen; */
+        }
+        body {
+            background-color: #222;
+            background-image: url(../html_2024.11.09/volleyball.png);
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtwnoMRY1aA1sn7ZSVuNTpgQ2yK7BfoyTl5A&s);
+            background-repeat: no-repeat;
+            /* 
+                left right top bottom
+            */
+            /* background-position: right bottom; */
+            /* background-position: -300px -100px; */
+            background-position: center;
+            /* scroll | fixed */
+            background-attachment: fixed;
+            /* background-size: auto 50px; */
+            background-size: contain; /* вписать в размеры элемента*/
+            background-size: cover; /* заполнить изображением все пространство */
+        }
+        p {
+            color: darkslateblue;
+        }
+        h2 {
+            color: rgba(83, 38, 80, .5); /* 0 - 255*/
+        }
+        /* 
+            0   0   255 blue
+            255 0   0   red
+            0   255 0   lime
+            0   0   0   black
+            255 255 255 white
+            255 255 0   yellow
+            255 0   255 magenta
+            0   255 255 cyan (aqua)
+        */
+        mark {
+            color: #ab3a92;
+            /* 
+                00  01  02  03  04  05  06  07  08  09
+                10  11  12  13  ...    
+                20  21 ...
+                90  ...                             99
+
+
+                00  01  02  03  04  05  06  07  08  09  0a  0b  0c  0d  0e  0f
+                10  11  12  13  14  15  16  17  18  19  1a  1b  1c  1d  1e  1f
+                20  22  23 ....
+                ..
+                ..
+                ..
+                a0  a1  ab
+                b
+                c
+                d
+                e
+                f0  f1  f2  f3  f4  f5  f6  f7  f8  f9  fa  fb  fc  fd  fe  ff - (16^2 - 1) - 255
+
+                
+
+            */
+        }
+
+
+        /* селектор по id*/
+        #special {
+            color: blueviolet;
+        }
+
+        /* селектор по классу */
+        .grey-text {
+            color: silver;
+        }
+        .pink-text {
+            color: pink;
+        }
+        .small-text {
+            font-size: 12px;
+        }
+        .big-text {
+            font-size: 22px;
+        }
+
+        h1 {
+            /*
+                font - шрифт
+                
+                font-family
+                    Шрифт с засечками (serif)
+                        Times New Roman
+                        Georgia
+                    Шрифт без засечек (sans serif)
+                        Arial
+                        Calibri
+                    Моноширинный шрифт (monospace)
+                        Consolas
+                        Lusida Console
+                    "Курсивный" - имитация написания от руки (coursive)
+                        Segoe Script (Segoe Print)
+                    Декоративный (fantasy)
+                        Impact
+                    
+                
+            */
+
+            font-size: 100px;
+            color: #ffffff;
+            /* Mistral */
+            font-family: Arial, Helvetica, sans-serif;
+            font-family: fantasy;
+        }
+        h2 {
+            font-size: 40px;
+            font-family: monospace;
+            font-style: normal; /* normal, italic */
+            font-weight: bolder;
+            font-weight: 100; /* 
+                100 - lighter
+                400 - normal
+                600 - bold
+                900 - bolder
+            */
+            line-height: 30px;
+        }  
+    </style>
+    <!-- <style>
+        p {
+            color: brown;
+        }
+    </style> -->
+</head>
+<body>
+    <!-- 
+        CSS - Cascading Stylesheets
+    -->
+    <!-- h1{Стили - это круто!}+article*3>h2>lorem6^p*2>lorem40 -->
+    <!-- 
+        Заказать рубашку:
+            Фасон
+            Цвет
+            Длина
+            Объем
+            Тип ворота
+            Пуговицы?
+                цвет
+                форма
+                размер
+                количество дырочек
+                материал
+            Узор
+            Принт?
+            Пуговицы или молния
+            Материал
+
+
+        селектор - на что указывает стиль (для чего он применяется)
+        правило:
+            свойство - значение
+            цвет рубашки - черный
+
+
+        p {color: red; font-size: 10px} 
+        h1 {
+            color: blue;
+            font-size: 20px;
+        } 
+        h2 {} 
+        article {}
+    -->
+    <!-- <h1 style="color:red; font-size: 25px">Стили - это круто!</h1> -->
+    <h1>Стили - this is coool!!</h1>
+    <article>
+        <h2 class="pink-text small-text">Lorem ipsum dolor sit amet consectetur.</h2>
+        <p>Lorem ipsum dolor sit, <span class="grey-text big-text">amet consectetur adipisicing</span> elit. Dicta quibusdam voluptatem quas ab incidunt dolores! Atque, earum qui corrupti fugit, veritatis excepturi, ipsa est recusandae tempora ipsam fugiat in! Laboriosam reiciendis dolorum vel voluptas velit esse, quibusdam assumenda saepe odio!</p>
+        <p>Temporibus maiores iusto molestias error distinctio sapiente magnam, unde provident placeat quaerat dolore et officia dolores recusandae! Assumenda deleniti, autem, ullam, ipsa eveniet temporibus facilis itaque animi laborum repellendus iusto beatae. Odit alias voluptate laborum voluptatum blanditiis magnam cupiditate odio!</p>
+    </article>
+    <article>
+        <h2 class="pink-text grey-text">Quas iure voluptas ducimus ullam. Laboriosam.</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur <mark>itaque aspernatur error</mark> corrupti, rerum sed hic at tempora? Ad facilis rem dolores veniam, neque ratione deleniti accusamus labore at ex, ut unde quas voluptatibus nostrum. Architecto sequi quae debitis iusto?</p>
+        <p id="special" class="pink-text small-text">Dolore fugit facilis consequatur officia necessitatibus consectetur enim, distinctio consequuntur autem quaerat, eligendi dolor, vel ut esse saepe eveniet possimus dignissimos et praesentium? Mollitia, repellat dolores? Nobis illo iusto maxime delectus deleniti id autem velit, accusantium repellendus saepe nisi corporis.</p>
+    </article>
+    <article>
+        <h2>Sequi enim repellat exercitationem praesentium voluptatibus.</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur impedit nihil, voluptatibus facilis animi reiciendis ad id quidem quia aspernatur tempore praesentium ut tempora doloribus accusantium quos, fugit amet quisquam officia in atque illo recusandae laudantium. Nesciunt quod maiores non.</p>
+        <p>Expedita magni ea voluptatum modi rerum iusto veritatis dicta atque eius cum dolorem veniam praesentium illum tempore, libero alias mollitia illo assumenda nobis molestias, velit officiis minus odio dolore. Corrupti saepe minima nulla voluptate ullam fugiat impedit explicabo temporibus perferendis!</p>
+    </article>
+</body>
+</html>
