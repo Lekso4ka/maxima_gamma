@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+}
+body {
+    font-family: sans-serif;
+}
+/*
+    px - минимальная ячейка экрана монитора, которая может быть закрашена одним цветом
+    % - процент от размера родительского тега
+    Разрешение - 1920х1080px
+*/
+.card {
+    background-color: rgb(75, 34, 34);
+    color: #fff;
+    width: 300px;
+    /* height: 350px; */
+    /* width: 120%; */
+    border-style: solid; /* none | solid | dotted | dashed */
+    border-color: lightskyblue;
+    border-width: 5px; 
+    box-sizing: border-box;
+    padding: 20px;
+    padding-left: 0;
+    padding-bottom: 50px;
+    /* top right bottom left */
+    padding: 20px 100px 0 10px;
+    /* y x */
+    padding: 20px 50px;
+    /* top x bottom */
+    /* padding: 20px 100px 50px; */
+    border: 10px dotted lightpink;
+    border-right-color: lightblue;
+    border-bottom-style: solid;
+    border-left: 5px solid forestgreen;
+    border: 5px solid lightblue;
+    /* margin: 100px; */
+    /* display - отображение на экране пользователя 
+        block | inline | none | inline-block
+    */
+    display: inline-block;
+    text-transform: capitalize;
+    text-align: justify;
+}
+
+.menu {
+    /* background-color: rgb(75, 34, 34); */
+    padding: 20px 55px;
+    /* disc | square | circle*/
+    list-style-type: none;
+    font-size: 0;
+}
+a {
+    color: inherit; /* унаследовать от родительского тега */
+    /* underline | overline | line-through */
+    text-decoration: none;
+    text-decoration-color: pink;
+}
+.item {
+    /* background-color: lightblue; */
+    width: 30%;
+    color: black;
+    font-family: monospace;
+    /* lowercase | uppercase | capitalize */
+    text-transform: lowercase;
+    /* left | right | center | justify */
+    text-align: center;
+    /* border: 1px solid orange; */
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top; /* baseline | top */
+    padding: 10px 0;
+    margin: 0 15px;
+    width: calc(100% / 3 - 30px);
+    font-size: 20px;
+    border-radius: 20px;
+}
+.item:hover {
+    background-color: pink;
+}
+.card:hover {
+    border: none;
+}
