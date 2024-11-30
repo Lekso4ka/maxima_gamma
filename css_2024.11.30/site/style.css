@@ -1,0 +1,31 @@
+body {
+    /* background-color: rgb(91, 243, 167); */
+    color: olivedrab;
+}
+h1 {
+    color: olivedrab;
+    font-family: monospace;
+    font-size: 60px;
+}
+h2 {
+    font-weight: 400;
+    color: black;
+    font-family: Impact, fantasy;
+}
+p {
+    font-family: sans-serif;
+    font-size: 12px;
+}
+/* ul {
+    color: yellow;
+} */
+a {
+    color: blueviolet;
+}
+.active {
+    font-family: Impact, fantasy;
+}
+.banner {
+    background-color: seagreen;
+    color: springgreen;
+}
