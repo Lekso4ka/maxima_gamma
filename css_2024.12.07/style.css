@@ -96,7 +96,7 @@ header {
     padding: 12px 50px;
     position: sticky;
     top: 15px;
-    /* z-index: ; */
+    /* z-index: 2; */
 }
 nav {
     background-color: blueviolet;
@@ -216,4 +216,19 @@ a {
 
 #btn:checked ~ .modal-wrapper {
     display: block;
+}
+.close {
+    display: block;
+    /* border: 2px solid; */
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    background-color: white;
+    box-shadow: 0 0 5px 1px blueviolet;
 }
