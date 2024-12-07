@@ -81,3 +81,139 @@
     Перемещает элемент относительно границ экрана (viewport)
 
 */
+
+
+
+
+/* Вторая часть - практика */
+body {
+    font: 24px sans-serif;
+    margin: 0;
+}
+header {
+    background-color: silver;
+    font-size: 0;
+    padding: 12px 50px;
+    position: sticky;
+    top: 15px;
+    /* z-index: ; */
+}
+nav {
+    background-color: blueviolet;
+    line-height: 50px;
+    padding: 0 50px;
+}
+section {
+    background-color: bisque;
+    /* border-top: 1px solid; */
+    padding: 30px 50px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    margin-top: 0;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.hor {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 24px;
+}
+.logo {
+    width: 300px;
+    line-height: 50px;
+}
+.menu {
+    /* background-color: blue; */
+    width: calc(100% - 300px);
+    font-size: 0;
+}
+.menu-item {
+    width: 20%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+.menu-item:hover  {
+    background-color: burlywood;
+}
+.menu-item:hover>.submenu {
+    display: block;
+}
+.submenu {
+    background-color: bisque;
+    display: none;
+    position: relative;
+    /* box-shadow: 2px 2px black, inset 2px 10px brown; */
+    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.5);
+    /* top: 12px; */
+}
+.submenu .menu-item {
+    width: 100%;
+    padding: 0 12px;
+    text-align: left;
+    box-sizing: border-box;
+}
+.submenu .menu-item:hover {
+    border-bottom: 2px solid burlywood;
+    background-color: transparent;
+}
+
+.modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #222222dd;
+    /* backdrop-filter: grayscale(100%); */
+    /* backdrop-filter: invert(100%); */
+    backdrop-filter: blur(2px);
+    display: none;
+}
+.modal {
+    position: absolute;
+    width: 800px;
+    background-color: white;
+    left: calc(50% - 400px);
+    top: 40%;
+    padding: 24px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+#btn {
+    display: none;
+}
+.button {
+    background-color: blueviolet;
+    display: block;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #fff;
+    line-height: 100px;
+    text-align: center;
+    font-size: 30px;
+    position: fixed;
+    right: -50px;
+    bottom: 50px;
+    z-index: 1;
+}
+/* .button:hover {
+    right: 40px;
+} */
+#btn:checked+.button {
+    background-color: silver;
+    color: #000;
+}
+
+#btn:checked ~ .modal-wrapper {
+    display: block;
+}
