@@ -1,0 +1,83 @@
+.child {
+    /* border: 1px solid; */
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    text-align: center;
+    /* line-height: 200px; */
+    /* font: font-size font-family */
+    /* font: font-style font-variant font-weight font-size / line-height font-family*/
+    /* font: italic small-caps 600 30px / 200px Arial, sans-serif */
+    font: 30px / 200px fantasy;
+    /* display: inline-block; */
+}
+.child1 {
+    background-color: blueviolet;
+    position: absolute;
+    /* 
+    Сдвинуть тег на определенное растояние в определенную сторону
+        left
+        right
+        top
+        bottom
+    */
+    /* left: auto;
+    top: auto;
+    left: 40px;
+    top: -150px; */
+    /* bottom: 10px; */
+    /* right: 100px; */
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+}
+/* .child1:hover {
+    left: 40px;
+    top: -150px;
+} */
+.child2 {
+    background-color: palevioletred;
+}
+.child3 {
+    background-color: darkslateblue;
+    position: relative;
+    left: 50px;
+    bottom: 50px;
+}
+.child4 {
+    background-color: deeppink;
+    position: fixed;
+    /* width: 600px;
+    height: 600px;
+    top: calc(50% - 300px);
+    left: calc(50% - 300px); */
+    width: initial;
+    height: initial;
+    top: 100px;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+    border-radius: 20px;
+
+}
+.parent {
+    background-color: cadetblue;
+    width: 400px;
+    /* height: 400px; */
+    position: relative;
+}
+
+/*
+    Каждый тег располагается в контенте там, где он был определен иначально в html-коде
+    position: static;
+
+    position: absolute; - абсолютное
+    С таким позиционированием родитель больше не видит этот тег у себя в контенте
+
+    Абсолютное позиционирование сдвигает элемент относительно ближайшего родительского тега (предка), у которого position отличен от static (или от размера viewport)
+
+    position: relative; - относителое (места тега)
+
+    position: fixed; - фиксированное
+    Перемещает элемент относительно границ экрана (viewport)
+
+*/
