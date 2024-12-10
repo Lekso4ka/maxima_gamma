@@ -1,0 +1,72 @@
+.container {
+    margin: 0;
+    font-family: sans-serif;
+}
+.main-header {
+    height: 60px;
+    background-color: forestgreen;
+}
+.screen-container {
+    background-color: rgba(34, 139, 34, 0.4);
+    height: 90vh;
+}
+.menu {
+    /* height: 100px; */
+    background-color: forestgreen;
+    border-bottom: 2px solid deeppink;
+    font-size: 0;
+}
+.menu_bg_dark {
+    background-color: darkslategray;
+}
+.menu_bg_blue {
+    background-color: darkcyan;
+}
+.menu_span-inner {
+    padding: 8px;
+    padding-bottom: 0;
+}
+.menu__btn {
+    display: inline-block;
+    border: 2px solid deeppink;
+    border-radius: 10px 10px 0 0; /* 20px 20px 10px 0*/
+    padding: 6px 12px;
+    color: white;
+    cursor: pointer;
+    border-bottom: 0;
+    font-size: 14px;
+    /* vertical-align: bottom; */
+}
+.menu__btn_green {
+    background-color: forestgreen;
+}
+.menu__btn_small {
+    background-color: rgba(255, 20, 145, 0.4);
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-top: 8px;
+    border: none;
+}
+.menu__btn_hov:hover {    background-color: rgba(255, 20, 145, 0.4);
+}
+.menu__btn_active {
+    background-color: deeppink;
+}
+.menu__item {
+    display: inline-block;
+    background-color: rgba(255, 20, 145, 0.4);
+    padding: 7px;
+    border-radius: 10px 10px 0 0;
+    font-size: 14px;
+    line-height: 1;
+}
+/* .menu__item {
+    ...
+}
+.menu__item_hover:hover {
+    ...
+} */
+
+.menu__item_active {
+    background-color: deeppink;
+}

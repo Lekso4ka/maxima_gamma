@@ -1,0 +1,53 @@
+<!-- 
+    https://ru.bem.info/methodology/
+    https://ru.bem.info/methodology/key-concepts/#%D0%B1%D0%BB%D0%BE%D0%BA
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Методология БЭМ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="container">
+    <header class="main-header"></header>
+    <!-- 
+        Правила БЭМ:
+            ЗАПРЕЩЕНО использовать
+            - селектор *
+            - селекторы по тегам
+            - селекторы по id
+            - селекторы комплексные (> / + / ~ ...)
+            - css-сбросы (reset.css)
+
+            Нельзя называть класс как тег (.h1 / .header / .nav)
+        .bottom-menu
+        .simple-wrapper
+        .card-header
+    -->
+    <nav class="menu menu_bg_blue menu_span-inner">
+        <div class="menu__btn menu__btn_hov">Tab1</div>
+        <div class="menu__btn menu__btn_active">Tab2</div>
+        <div class="menu__btn menu__btn_green menu__btn_hov">Tab3</div>
+        <div class="menu__btn menu__btn_hov">Tab4</div>
+        <!-- <div class="menu__item menu__item_active">
+            <i class="fa-solid fa-dove"></i>
+        </div>
+        <div class="menu__item">
+            <i class="fa-solid fa-fish"></i>
+        </div> -->
+        <div class="menu__btn menu__btn_small menu__btn_active">
+            <i class="fa-solid fa-dove"></i>
+        </div>
+        <div class="menu__btn menu__btn_small">
+            <i class="fa-solid fa-fish"></i>
+        </div>
+
+    </nav>
+    <section class="screen-container"></section>
+    
+</body>
+</html>
