@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+.parent {
+    height: 400px;
+    background-color: orangered;
+    display: flex;
+    /* row | row-reverse | column | column-reverse */
+    flex-direction: row;
+    /* 
+    justify-content - расположение флекс-элементов вдоль основной оси (flex-direction)
+        flex-start | flex-end | center | space-between | space-around
+    */
+    /* justify-content: space-between; */
+    justify-content: space-between;
+    /*
+        align-items - расположение элементов вдоль перпендикулярной оси
+        stretch (растянуть / заполнить все пространство) | flex-start | flex-end | center | baseline
+    */
+    align-items: flex-start;
+    gap: 20px;
+}
+.child {
+    background-color: orange;
+    width: 100%;
+    /* height: 50px; */
+    /* line-height: 50px; */
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid orange;
+}
+.child3 {
+    height: 75px;
+}
+
+/* display: block | inline | inline-block */
