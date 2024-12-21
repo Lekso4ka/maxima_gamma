@@ -42,3 +42,102 @@ body {
 }
 
 /* display: block | inline | inline-block */
+
+.cards {
+    background-color: brown;
+    padding: 30px calc(50% - 600px);
+    display: flex;
+    gap: 30px;
+}
+.cards__item {
+    background-color: orangered;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+.cards__caption {
+    margin: 0;
+    /* background-color: blueviolet; */
+    width: 100%;
+    color: brown;
+    text-shadow: 1px 1px 2px #00000056;
+    /* text-align: center; */
+}
+.cards__text {
+    margin: 0;
+    width: 100%;
+}
+.cards__img {
+    height: 100px;
+}
+.banner {
+    height: 800px;
+    background-image: url(images/brick.jpg);
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: auto 110%;
+}
+.banner__bg {
+    padding: 50px calc(50% - 600px);
+    background-color: rgba(107, 41, 41, 0.8);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.banner__img {
+    width: 500px;
+}
+.banner__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 50px;
+
+}
+.banner__caption {
+    color: #fff;
+    font-size: 60px;
+    margin: 0;
+    width: 600px;
+}
+.banner__text {
+    color: #fff;
+    font-size: 30px;
+    text-shadow: 2px 2px 5px #000;
+    width: 600px;
+    margin: 0;
+    /* text-align: justify; */
+}
+
+.main-header {
+    background-color: orangered;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* widthh - 1200px 
+        100% - 1200px - остаток экрана, который надо поделить по ровну (справа и слева)
+    */
+    padding-right: calc((100% - 1200px) / 2);
+    padding-left: calc(50% - 600px);
+}
+.main-header__img {
+    height: 80px;
+}
+.menu {
+    display: flex;
+    gap: 12px;
+}
+.menu__item {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #000000ba;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
