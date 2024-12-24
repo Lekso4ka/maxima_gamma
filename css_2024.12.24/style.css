@@ -1,0 +1,150 @@
+.card {
+    width: 300px;
+    border: 1px solid;
+    padding: 10px;
+}
+body,
+.card h3, 
+.card p {
+    margin: 0;
+}
+
+.pic {
+    background-color: red;
+    width: 100px;
+    background-image: url(../css_2024.12.21/images/brick.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.pic, img {
+    height: 100px;
+    border-radius: 50%;
+}
+body {
+    padding: 20px;
+}
+
+/* body :hover {
+    background-color: orange;
+} */
+p::before {
+    content: "#";
+    color: red;
+    font-size: 40px;
+}
+p::after {
+    content: "ø";
+    text-decoration: underline;
+    font-size: 24px;
+    background-color: orange;
+}
+
+h2 {
+    text-align: center;
+    /* border-bottom: 1px solid red; */
+    position: relative;
+}
+h2::before {
+    content: "";
+    color: red;
+    width: 100px;
+    height: 5px;
+    background-color: orange;
+    position: absolute;
+    top: 100%;
+    left: calc(50% - 50px);
+    box-shadow: 0 10px 0 red;
+}
+h2::after {
+    content: "";
+    color: red;
+    width: 100px;
+    height: 5px;
+    background-color: orange;
+    position: absolute;
+    top: -5px;
+    left: calc(50% - 50px);
+    box-shadow: 0 -10px 0 red;
+}
+
+ul {
+    list-style-type: none;
+    line-height: 16px;
+}
+ul li {
+    margin: 8px 0;
+}
+ul>li::before {
+    /* content: url(../css_2024.12.21/images/dog.png); */
+    content: "\2714";
+    /* width: 16px; */
+    /* background-color: orange; */
+    margin-right:6px;
+    /* height: 16px; */
+    /* display: inline-block; */
+    font-size: 14px;
+    /* vertical-align: bottom; */
+    /* background-image: url(../css_2024.12.21/images/dog.png);
+    background-size: contain; */
+}
+
+[title] {
+    font-family: monospace;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+input[type="checkbox"]+label {
+    user-select: none;
+    position: relative;
+    line-height: 20px;
+    padding-left: 30px;
+}
+input[type="checkbox"]+label::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    border: 1px solid;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input[type="checkbox"]:checked + label::before {
+    /* background-color: orange; */
+    content: "\2714"
+}
+
+input[type="checkbox"]+.switch::before {
+    height: 14px;
+    width: 24px;
+    top: 2px;
+    border-radius: 8px;
+    opacity: .5;
+}
+.switch::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: black;
+    left: 2px;
+    top: 4px;
+    opacity: .5;
+}
+input[type="checkbox"]:checked + .switch::after {
+    left: 12px;
+    opacity: 1;
+}
+
+input[type="checkbox"]:checked + .switch::before {
+    content: "";
+    background-color: orange;
+    opacity: 1;
+}
