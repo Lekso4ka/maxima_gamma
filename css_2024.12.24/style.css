@@ -27,17 +27,17 @@ body {
 /* body :hover {
     background-color: orange;
 } */
-p::before {
+/* p::before {
     content: "#";
     color: red;
     font-size: 40px;
-}
-p::after {
+} */
+/* p::after {
     content: "ø";
     text-decoration: underline;
     font-size: 24px;
     background-color: orange;
-}
+} */
 
 h2 {
     text-align: center;
@@ -147,4 +147,96 @@ input[type="checkbox"]:checked + .switch::before {
     content: "";
     background-color: orange;
     opacity: 1;
+}
+
+/* не посещенная */
+a:link {
+    text-decoration: overline;
+    color: orange;
+}
+a:visited {
+    color: orangered;
+}
+a:active {
+    background-color: lightgreen;
+}
+button {
+    /* border: 3px outset; */
+    border: 1px solid;
+    outline: none;
+}
+button:active {
+    border: 1px solid red;
+}
+
+button:focus {
+    background-color: aquamarine;
+}
+input:focus {
+    outline: none;
+    border-color: orange;
+    border-style: solid;
+}
+
+li:first-child {
+    /* background-color: aquamarine;    */
+}
+/* li:nth-child(3) { */
+li:nth-last-child(2) {
+    /* background-color: blueviolet; */
+}
+li:last-child {
+    /* background-color: lightcoral; */
+}
+
+.block {
+    /* background-color: lightblue; */
+    height: 200px;
+    display: flex;
+}
+.block-item {
+    background-color: lightblue;
+    width: 30%;
+}
+/* .block-item:first-child {
+    margin-right: 5%;
+}
+.block-item:last-child {
+    margin-left: 5%;
+} */
+
+/* .block-item:nth-child(2) {
+    margin: 0 5%;
+} */
+.block-item:not(:last-child) {
+    margin-right: 5%;
+}
+
+/* p:first-of-type {
+    background-color: orange;
+}
+h2:last-of-type::before {
+    background-color: blue;
+} */
+
+/* body>:nth-child(2n) { */
+body>:nth-child(3n - 1) {
+    background-color: lightgreen;
+}
+body>:nth-child(3n - 2) {
+    /* background-color: orange; */
+}
+
+body>:nth-child(3n) {
+    /* background-color: blueviolet; */
+}
+
+p::first-letter {
+    font-weight: bold;
+    color: red;
+    font-size: 20px;
+}
+p::first-line {
+    text-transform: capitalize;
+    font-variant: small-caps;
 }
