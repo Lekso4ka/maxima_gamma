@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            /* font-size: 20px; */
+        }
+        body {
+            min-height: 100vh;
+            background-image: url(../css_2024.12.21/images/brick.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* margin: 0; */
+            /*
+                em - относительно родительского размера (текста)
+                rem - относительно размера теста, заданного по умолчанию
+            
+            */
+        }
+        .card {
+            background-color: silver;
+            /* width: 200px; */
+            width: 10rem;
+            /* height: 100px; */
+            min-height: 5rem;
+            /* max-height: 200px; */
+            max-height: 10rem;
+            overflow: auto;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+        .card:nth-of-type(2) {
+            background-color: violet;
+            color: purple;
+            font-size: 2rem;
+        }
+        .card span {
+            color: #fff;
+            font-size: .5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore nemo odit, dolores architecto illo voluptatem eos repudiandae, voluptate quaerat dolorum cum nam, dolore saepe! Vel nisi, eius temporibus accusantium quam totam enim quidem harum dignissimos reiciendis quis perspiciatis commodi quibusdam!</div>
+    <div class="card">Lorem <span>ipsum</span></div>
+</body>
+</html>
