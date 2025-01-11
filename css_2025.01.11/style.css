@@ -24,6 +24,7 @@ body {
     /* align-items: center; */
     /* align-content: center; */
     grid-template-rows: 5rem 20rem repeat(4, 1fr) 2rem;
+    /* justify-items: flex-start; */
 }
 
 .item {
@@ -50,12 +51,15 @@ body {
     grid-column: 1 / span 7;
     grid-row-start: 1;
 
+
+
 }
 
 .item:nth-child(28) {
     background-color: #000;
     color: #dedede;
     grid-column: 1 / 8;
+    /* justify-self: flex-end; */
 }
 
 .item:first-child {
@@ -66,4 +70,113 @@ body {
     background-color: steelblue;
     grid-row: 2 / span 5;
     /* grid-column: 1 / 2; */
+}
+
+.div {
+    display: grid;
+    grid-template-areas: 
+        "first first first first"
+        "second third third third"
+        "second third third third"
+        "second third third third"
+        "second third third third"
+    ;
+}
+
+.divChild {
+    grid-area: first;
+}
+.divChild2 {
+    grid-area: second;
+}
+.divChild3 {
+    grid-area: third;
+}
+
+/*
+    align-items - выравнивание по вертикали элементов внутри строки!!!
+    align-content - выравнивание строк по вертикали
+    justify-items - выравнивание по горизонтали элементов внутри столбца
+    justify-content - выравнивание столбцов по горизонтали
+    
+    // Изменение выравнивания элемента сетки
+    justify-self
+    align-self
+*/
+
+.wrapper {
+    background-color: #222;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+form {
+    width: 50rem;
+    min-height: 15rem;
+    background-color: silver;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+input, textarea {
+    font-family: inherit;
+    outline: none;
+    height: 1.5rem;
+    border-radius: .5rem;
+    border: 1px solid #bebebe;
+    background-color: #dedede;
+    padding: 0 .5rem;
+    font-size: .8rem;
+}
+input:focus,
+textarea:focus {
+    border-color: steelblue;
+    box-shadow: 0 0 5px 0 steelblue;
+}
+textarea {
+    height: 100%;
+    resize: none;
+}
+label {
+    color: #222;
+    cursor: pointer;
+}
+.row {
+    display: grid;
+    gap: .5rem;
+    grid-template-rows: auto 1fr;
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
+}
+
+.row-r2 {
+    /* grid-area: 3 / 2 / span 2 / span 1; */
+    grid-row: 4 / span 2;
+    grid-column-start: 2;
+    /* background-color: aqua; */
+}
+
+form h2 {
+    grid-column-end: span 2;
+    margin: 0;
+}
+button {
+    border: none;
+    height: 1.5rem;
+    outline: none;
+    background-color: #222;
+    color: #dedede;
+    border-radius: .5rem;
+    width: 8rem;
+    cursor: pointer;
+    justify-self: flex-end;
+    grid-column-start: 2;
 }
