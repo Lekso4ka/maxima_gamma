@@ -1,0 +1,7 @@
+https://nodejs.org/en
+
+Проверка node.js
+    node -v
+    npm - node package manager
+
+    npm -v
