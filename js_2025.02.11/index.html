@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 4</title>
+    <script src="../js/functions.js"></script>
+</head>
+<body>
+    <!-- <script src="script.js"></script> -->
+     <script>
+        // console.log(getNumber())
+        // console.log(getColor())
+        document.body.style.background = getColor(30)
+
+
+        let money = 10000;
+        let persons = getNumber(1000000, 10000)
+        let price = parseFloat((10000000 / persons).toFixed(2));
+
+        let result = money + price;
+        console.log(`В вашем кошельке сейчас ${result} руб.`)
+
+
+     </script>
+</body>
+</html>
+
+<!-- ctrl + R -->
