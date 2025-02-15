@@ -56,7 +56,7 @@ capitals.gb = "London"
 // capitals.Great Britan = "London"
 capitals["Great Britan"] = "London"
 capitals["Российская Федерация"] = "Москва"
-console.log(capitals)
+// console.log(capitals)
 
 delete capitals.russia
 delete capitals.gb
@@ -130,6 +130,64 @@ for (let i = 0, cnt = text.length;
     
 }
 
+// console.log(i)
+// console.log(hash)
 
-console.log(i)
-console.log(hash)
+/*
+    Объект в его классическом варианте
+*/
+
+let keys = {
+    brand: "Завод",
+    model: "Модель",
+    wheelsCnt: "Количество колес",
+    doorsCnt: "Количество дверей",
+    color: "Цвет",
+    vin: "VIN номер",
+}
+
+
+let car1 = {
+    brand: "ЗАЗ",
+    model: "Запорожец",
+    color: getColor(),
+    wheelsCnt: 4,
+    doorsCnt: 2,
+    automat: false,
+    vin: "abc123987o",
+    name: "Истребитель",
+    user: {
+        name: "Vasya",
+        document: "vvv123",
+        start: "2025-01-01"
+    },
+    showColor: function() {
+        console.log(`Машина ${this.model} ${this.name} покрашена в цвет - ${this.color}`)
+    },
+    updateColor: function(newColor) {
+        this.color = newColor
+    },
+    showInfo: function() {
+        let str = "";
+        for (let k in keys) {
+            str += `${keys[k]}: ${this[k]}\n`
+        }
+        if (this.automat) {
+            str += "КПП: автомат"
+        } else {
+            str += "КПП: механика"
+        }
+        return str;
+    }
+}
+
+// console.log(car.user)
+console.log(`Владелец автомобиля: ${car1.user.name}`)
+
+
+// car.showColor()
+car1.updateColor("orange")
+car1.updateColor("green")
+// car.showColor()
+
+console.log(car1.showInfo())
