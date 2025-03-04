@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        span {
+            color: red;
+        }
+        b {
+            color: green;
+        }
+    </style>
+    <script src="../js/functions.js"></script>
+</head>
+<body>
+    <!-- h1>lorem5^p*3>lorem20 -->
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. <span>Ullam ipsum fugit atque.</span> Sequi ex culpa dolore eligendi voluptas, eveniet quia?</p>
+    <p>Distinctio, similique enim quod numquam animi necessitatibus. Ab molestias, maxime soluta cum dolorum explicabo, enim quasi dolor accusantium minus quae.</p>
+    <p>Quas quasi at blanditiis quae obcaecati iure nesciunt illo quos ipsum vitae ut veniam cum quisquam accusantium, nihil recusandae? Temporibus.</p>
+    <script>
+
+        // DOM - Document Object Model
+        // window.innerHeight - 100vh
+        // window.innerWidth - 100vw
+
+        // screen - информацияя об устройстве пользователя
+        // screen.width | screen.height
+
+        // navigator.language - текущий язык пользователя
+
+        // location - объект, работающий с адресной строкой браузера
+        // location.reload() - перезагрузить страницу
+        // location.replace("link") - перейти на другую страницу
+
+        const COLOR = getColor();
+        console.log(COLOR);
+
+        // document - отвечает за весь HTML
+        // Цель - узнать и запомнить как можно больше свойств и методов работы с этим объектом
+
+
+        // document.body - тег body
+
+        // Цель - найти и поменять текст в теге span
+        // .firstChild | .lastChild | .nextSibling | .previousSibling
+        // .firstElementChild | .lastElementChild | .nextElementSibling | .previousElementSibling
+        let span = document.body.firstChild.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling
+        span = document.body.firstElementChild.nextElementSibling
+        span = document.body.children[1]
+        span = span.firstElementChild
+        console.log(span)
+        document.body.innerHTML = "Hello!"
+
+        // .innerText | .innerHTML
+        // span.innerText += " Hello <b>Everyone</b>."
+        span.innerHTML += " Hello <b>Everyone</b>."
+    </script>
+</body>
+</html>

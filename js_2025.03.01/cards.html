@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .wrap {
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+            /* height: 300px; */
+            height: 100vh;
+            gap: 20px;
+            /* background-color: aquamarine; */
+            display: grid;
+            grid-template-columns: repeat(5, auto);
+            justify-content: center;
+            align-content: center;
+        }
+        .card {
+            width: 100px;
+            height: 100px;
+            border: 1px solid silver;
+            border-radius: 8px;
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card img {
+            height: 70%;
+        }
+        img {
+            height: 30px;
+        }
+    </style>
+    <script src="../js/functions.js"></script>
+</head>
+<body>
+    <div id="wrapper" class="wrap">
+        <!-- <div class="card">
+            <img src="./icons/Tilda_Icons_22sp_skiing.svg" alt="skiing">
+        </div> -->
+    </div>
+    <script>
+        const icons = [
+            "Tilda_Icons_22sp_baseball.svg",
+            "Tilda_Icons_22sp_basketball.svg",
+            "Tilda_Icons_22sp_cycle.svg",
+            "Tilda_Icons_22sp_field.svg",
+            "Tilda_Icons_22sp_football.svg",
+            "Tilda_Icons_22sp_gymnastics.svg",
+            "Tilda_Icons_22sp_hoсkey.svg",
+            "Tilda_Icons_22sp_martialarts.svg",
+            "Tilda_Icons_22sp_rugby.svg",
+            "Tilda_Icons_22sp_skates.svg",
+            "Tilda_Icons_22sp_skiing.svg",
+            "Tilda_Icons_22sp_sneaker.svg",
+            "Tilda_Icons_22sp_snowboarding.svg",
+            "Tilda_Icons_22sp_start.svg",
+            "Tilda_Icons_22sp_tennis.svg",
+            "Tilda_Icons_22sp_tracker.svg",
+            "Tilda_Icons_22sp_volleyball.svg",
+            "Tilda_Icons_22sp_weight.svg",
+            "Tilda_Icons_22sp_whistle.svg",
+            "Tilda_Icons_22sp_win.svg",
+        ]
+        const container = document.body.firstElementChild;
+        // console.log(container);
+        
+        function drawCard(index) {
+            container.innerHTML += `<div class="card">
+                <img src="./icons/${icons[index]}" alt="">
+            </div>`;
+        }
+
+        for (let i = 0; i < icons.length; i++) {
+            // console.log(i);
+            // container.innerText = container.innerText + i;
+            // container.innerText += i;
+            // container.innerHTML += "<span>" + i + "</span>";
+            // container.innerHTML += `<span>${i}</span>`;
+            // container.innerHTML += `<img src="./icons/${icons[i]}" alt="">`;
+            drawCard(i)
+        }
+
+        // Сколько карточек будет?
+        let count = getNumber(10, 4);
+        console.log(count);
+        // В Любом html-теге можно обратиться к его атрибуту как к свойству объекта, кроме атрибутов class и for (className | htmlFor)
+        if (count % 3 === 0) {
+            container.style.gridTemplateColumns = "repeat(3, auto)"
+        } else if (count === 4) {
+            container.style.gridTemplateColumns = "repeat(2, auto)"
+        } else {
+            container.style.gridTemplateColumns = "repeat(4, auto)"
+        }
+        let randIcons = []
+        while(count--) {
+            let rand = getNumber(icons.length);
+            randIcons.push(icons[rand]);
+        }
+        // console.log(randIcons)
+        container.innerText = "";
+
+        for (let i = 0; i < randIcons.length; i++) {
+            container.innerHTML += `<div class="card">
+                <img src="./icons/${randIcons[i]}" alt="">
+            </div>`;
+        }
+        // Поиск html-тегов
+        // .querySelector - первый подходящий по селектору элемент
+        // .querySelectorAll - список всех подходящих по селектору элементов
+        let el1 = document.querySelector(".card")
+        el1.style.background = "red";
+        console.log(el1)
+
+        let el2 = document.querySelectorAll(".card img")
+        el2[0].style.background = "white";
+        el2[0].style.borderRadius = "4px";
+        console.log(el2)
+    </script>
+</body>
+</html>
