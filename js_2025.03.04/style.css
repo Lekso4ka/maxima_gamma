@@ -1,0 +1,43 @@
+body {
+    font: 20px sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn {
+    border: none;
+    background-color: springgreen;
+    font: inherit;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.square {
+    width: 300px;
+    height: 300px;
+    border: 2px solid forestgreen;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.block {
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cloud {
+    position: fixed;
+    padding: 10px 20px;
+    border: 2px solid  blue;
+    border-radius: 50% 50% 60% 0 / 65% 50% 55% 0;
+    top: 400px;
+    left: 100px;
+    display: grid;
+}

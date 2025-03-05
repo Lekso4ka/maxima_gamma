@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Методы и события DOM</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="../js/functions.js"></script>
+</head>
+<body>
+    <div class="block">
+        <div class="square" id="sq">
+            <!-- <button class="btn" onclick="pushTheBtn()">Click</button> -->
+            <button class="btn">Click</button>
+        </div>
+    </div>
+    
+    <script>
+        let n = 0;
+
+        function pushTheBtn(e) {
+            e.stopPropagation();
+            if (e.target.tagName.toLowerCase() === "button") {
+                n++;
+                e.target.innerText = `Clicked ${n} times`
+            }
+            e.currentTarget.style.backgroundColor = getColor(40)
+        }
+
+        function createCloud(coords, el) {
+            // block.innerHTML += `<div class="cloud">
+            //     
+            // </div>`
+            if (el.children.length > 1) {
+                el.lastElementChild.remove()
+            }
+            const tag = document.createElement("div")
+            tag.innerHTML = `<span>x: ${coords.x}</span><span>y: ${coords.y}</span>`;
+            tag.className = "cloud";
+            el.append(tag);
+            tag.style.left = coords.x + "px";
+            tag.style.top = `${coords.y - tag.offsetHeight}px`;
+            // console.log(tag.offsetHeight)
+
+        }
+
+        // document.getElementById("")
+        // document.getElementsByClassName("block")
+        // document.getElementsByTagName("div")
+        // document.getElementsByName("email")
+
+        const block = document.querySelector(".block")
+        // document.querySelectorAll()
+
+        const btn = block.querySelector("button")
+
+        // btn.onclick = pushTheBtn
+
+        // block.onclick = function(event) {
+        //     n++;
+        //     console.log(event)
+        //     console.log(event.target) // тег, который вызвал событие
+        //     console.log(event.currentTarget) // тег, который является инициатором события
+        //     console.log(this) // тег, внутри которого описана функция с событием
+        //     console.log(`Button pushed ${n} times`)
+        // }
+
+
+        block.onclick = pushTheBtn
+
+        btn.onclick = pushTheBtn
+
+        // click - нажатие и отжатие лкм
+        // mousedown - нажатие лкм
+        // mouseup - отжать лкм
+        // mousemove - движение курсора мыши
+        // scroll
+        
+        let moveStart = false;
+
+        function move(e) {
+            if (e.type === "mousedown") {
+                moveStart = true
+            } else if (e.type === "mouseup") {
+                moveStart = false;
+            } else if (e.type === "mousemove" && moveStart) {
+                const coords = {
+                    x: e.clientX,
+                    y: e.clientY
+                }
+                createCloud(coords, block)
+            }
+        }
+
+        block.onmousemove = move
+        block.onmousedown = move
+        block.onmouseup = move
+
+
+    </script>
+
+</body>
+</html>
