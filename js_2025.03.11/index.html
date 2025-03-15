@@ -1,0 +1,77 @@
+<!--
+    Классы и работа с ними
+    Обработка форм обратной связи
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM. Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="../js/functions.js"></script>
+</head>
+<body>
+    <!-- Аккордеон - FAQ -->
+    <section class="second">
+        <form id="add_card">
+            <input type="text" name="user" class="inp" placeholder="Имя">
+            <input type="text" name="digit" class="inp" placeholder="0000 0000 0000 0000">
+            <div class="row">
+                <label><input type="radio" name="bank" value="visa"> Visa</label>
+                <label><input type="radio" name="bank" value="mc"> MasterCard</label>
+                <label><input type="radio" name="bank" value="mir" checked> МИР</label>
+            </div>
+            <button type="submit">Добавить карту</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Держатель</th>
+                    <th>Номер карты</th>
+                    <th>Банковская система</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section class="first">
+        <h2>FAQ</h2>
+<!--    (h4.question>lorem10^p.answer>lorem50)*5-->
+        <h4 class="question">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, officia?</h4>
+        <p class="answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid fugiat impedit quod
+            tempore tenetur totam! Ab adipisci asperiores dolore ducimus, eos eveniet ex facere, ipsam molestiae officia
+            omnis quia repellat sequi. Assumenda consequatur dolore excepturi molestiae nobis nostrum, officiis omnis
+            optio possimus provident quo rerum ut velit voluptate voluptates?</p><h4 class="question">Deleniti eligendi
+        ex laboriosam magni minima mollitia placeat quidem unde.</h4>
+        <p class="answer">Accusantium aliquam commodi doloribus exercitationem explicabo, molestiae molestias,
+            necessitatibus odio quia quis, reiciendis repellendus tempore! Asperiores aut deleniti dignissimos
+            doloremque ea eaque enim esse ex excepturi expedita, facere fuga fugit, inventore ipsa iste laudantium
+            maxime nam nemo obcaecati optio provident quis quos reiciendis repellendus tenetur vel vitae voluptatum?
+            Consectetur, voluptas?</p>
+        <h4 class="big question active">Distinctio, fugiat magni quisquam quo quos recusandae
+        repellendus sint tenetur?</h4>
+        <p class="answer">Cum, deserunt dolorum explicabo facere fuga fugit iusto laboriosam minus nesciunt quam quasi
+            quisquam recusandae, sapiente, sint tempore totam voluptas. Adipisci, debitis distinctio! Commodi
+            dignissimos doloribus eligendi facilis fuga in minima molestias nulla, odit possimus quisquam, sit vero?
+            Beatae esse est facere harum illo labore sapiente vel! At eaque, molestias.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid aperiam asperiores aut corporis cumque dolorem doloribus ea eaque eius id laudantium libero, magnam nihil obcaecati porro quas quasi quisquam repellendus reprehenderit repudiandae sit vel vero. Ad aliquam at cumque, dolor est fugiat laboriosam maiores nemo, nobis, non tempora unde voluptates. A amet asperiores cupiditate enim, eos nesciunt non. Molestiae praesentium, veniam. A ad adipisci amet deserunt error expedita facere ipsum laudantium magnam minima molestias nihil nulla odit quibusdam, saepe? A alias atque dolores esse excepturi exercitationem facilis harum in magni, officiis rem tempore veniam voluptate. At inventore optio pariatur.</p><h4 class="question">
+        Consequatur culpa cupiditate iure nam nemo neque pariatur quae sint.</h4>
+        <p class="answer">Ea fugiat illum minima nihil repellendus saepe sint unde? Architecto beatae ducimus eius
+            laboriosam minima modi nostrum qui quos, vero voluptatem. Aut error facere molestias nobis odit quia ratione
+            rem repellat repudiandae tenetur. Accusantium enim eos esse facilis incidunt laborum magni non officia
+            pariatur placeat quaerat quisquam, rem sapiente ullam.</p><h4 class="question">Adipisci amet eveniet magnam
+        officia perferendis sequi temporibus voluptate voluptates!</h4>
+        <p class="answer">Cumque dolorum est fugiat laudantium molestiae, neque quis sint! Facere necessitatibus vel
+            voluptatibus! Dignissimos ea esse nulla quidem quisquam quod voluptates, voluptatum. Ab adipisci assumenda
+            autem consequuntur cum cupiditate dolore eius, fuga laudantium, natus officiis, repudiandae tempora vel!
+            Earum itaque mollitia nesciunt nostrum provident quae qui quos rerum sunt tenetur?</p>
+    </section>
+    <script src="./script.js"></script>
+</body>
+</html>
