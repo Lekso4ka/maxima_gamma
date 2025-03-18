@@ -1,0 +1,87 @@
+<!-- 
+    Frontend - я хочу получить информацию о новинках книг ->
+    Backend - связь с БД - получение результата - отдать результат клиент
+
+    request -> response
+
+
+    Статусы ответа от сервера:
+        https://developer.mozilla.org/ru/docs/Web/HTTP/Reference/Status
+
+    API - application program interface - способ передачи данных между двумя устройствами
+
+    https://newsapi.org/
+    https://openweathermap.org/api/one-call-3
+    https://github.com/public-apis/public-apis?tab=readme-ov-file
+
+    REST Full API
+        возможно не только получить информацию,
+        но и добавление/изменение и удаление информации 
+
+    GET - получение данных
+    POST - отправка данных (доваление нового товара)
+    PUT / PATCH - изменение данных
+    DELETE - удалить данные
+
+
+    https://cats.petiteweb.dev/doc/
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./functions.js"></script>
+</head>
+<body>
+    <button class="addBtn">+</button>
+    <div class="wrapper">
+        <!-- <div class="card">
+            <div class="pic"></div>
+            <div class="content">
+                <h3>имя</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div> -->
+    </div>
+    <div class="modal">
+        <form>
+            <div class="row">
+                <label for="id">ID котика</label>
+                <input id="id" name="id" type="number" min="1">
+            </div>
+            <div class="row">
+                <label for="name">Имя</label>
+                <input id="name" name="name" type="text">
+            </div>
+            <div class="row">
+                <label for="image">Картинка</label>
+                <input id="image" name="image" type="url">
+            </div>
+            <div class="row">
+                <label for="desc">Описание</label>
+                <input id="desc" name="description" type="text">
+            </div>
+            <button>Добавить котика</button>
+        </form>
+    </div>
+    <script src="./script.js"></script>
+    <!-- <script>
+        fetch("https://cats.petiteweb.dev/api/single/leksa/show")
+            .then(res => {
+                if (res.status === 200) {
+                    return res.json()
+                }
+                else {
+                    return "Error"
+                }
+            })
+            .then(data => {
+                console.log(data)
+            })
+    </script>   -->
+</body>
+</html>

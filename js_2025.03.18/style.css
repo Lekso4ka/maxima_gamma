@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+h3, p {
+    margin: 0;
+}
+.wrapper {
+    padding: 100px 50px;
+    box-sizing: border-box;
+    background-color: burlywood;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    align-content: flex-start;
+}
+.card {
+    border: 1px solid;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.pic {
+    height: 120px;
+    background-color: silver;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pic>img {
+    height: 100%;
+}
+.content {
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+}
+.btn {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    background-color: silver;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+button {
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid;
+    border-radius: 4px;
+    font-size: 20px;
+    cursor: pointer;
+}
+button:first-child {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.modal {
+    position: fixed;
+    background-color: #fff5;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+form {
+    background-color: silver;
+    padding: 30px;
+    border-radius: 8px;
+    display: grid;
+    gap: 8px;
+}
+.row {
+    display: grid;
+    gap: 4px;
+}
