@@ -10,3 +10,4 @@ function getColor(a = 100) {
 
     return `rgba(${red},${green},${blue},${a / 100})`
 }
+

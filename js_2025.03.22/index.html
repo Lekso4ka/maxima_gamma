@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS ООП</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .win, .cats {
+            position: fixed;
+            background-color: rgb(47, 39, 55);
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .cats {
+            top: 30px;
+            left: 30px;
+            right: 30px;
+            bottom: 30px;
+            border-radius: 20px;
+            background-color: rgba(192, 192, 192, 0.253);
+            backdrop-filter: blur(2px);
+            box-shadow: 0 0 5px #fff8;
+            padding: 50px;
+            gap: 8px;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            align-content: flex-start;
+        }
+        .card {
+            min-height: 100px;
+            border-radius: 8px;
+            background-color: silver;
+            background-size: cover;
+        }
+    </style>
+    <script src="../js/functions.js"></script>
+</head>
+<body>
+    <h1>Hello OOP!</h1>
+    <div class="win"></div>
+    <div class="cats"></div>
+    <script src="./part1.js"></script>
+    <script src="./part2.js"></script>
+</body>
+</html>
