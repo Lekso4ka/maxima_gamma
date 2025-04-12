@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typescript. Lesson 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 
+        Научиться получать, сохранять, изменять и удалять информацию о чем-то (книги)
+
+        https://fakerapi.it/
+    -->
+    <button class="add">+</button>
+    <div class="content">
+        <!-- <div class="card">
+            <div class="pic"></div>
+            <div class="info">
+                <h3>Название книги</h3>
+                <h4>Имя автора</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, atque.</p>
+                <div class="bottom">
+                    <span>isbn</span>
+                    <span>genre</span>
+                    <button>del</button>
+                    <button>upd</button>
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <div class="modal">
+        <div class="modal-content">
+            <button class="close">x</button>
+            <form>
+                <input type="hidden" name="isbn">
+                <input type="text" name="title" placeholder="Название книги">
+                <input type="text" name="author" placeholder="Имя автора">
+                <select name="genre">
+                    <option>Детектив</option>
+                    <option>Фантастика</option>
+                    <option>Роман</option>
+                    <option>Новелла</option>
+                    <option>Поэзия</option>
+                </select>
+                <textarea name="description" placeholder="Описание книги"></textarea>
+                <button>Изменить</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/index.js" type="module"></script>
+</body>
+</html>

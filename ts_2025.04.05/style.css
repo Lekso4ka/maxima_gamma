@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tree-block {
+    display: grid;
+    justify-items: center;
+}
+.tree {
+    background-color: aquamarine;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+}
+.tree-bottom {
+    border-bottom: 300px solid brown;
+    width: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    position: relative;
+    bottom: 40px;
+}
+.apple {
+    width: 30px;
+    height: 30px;
+    /* background-color: forestgreen; */
+    border-radius: 50%;
+    position: absolute;
+    top: 130px;
+    left: 50px;
+    background-image: url("https://png.pngtree.com/png-clipart/20221230/ourmid/pngtree-apple-clipart-png-image_6540887.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: transform 500ms cubic-bezier(.22,1.57,.64,.76);
+    /* transition: transform 500ms cubic-bezier(.57,1.76,.76,.55); */
+}

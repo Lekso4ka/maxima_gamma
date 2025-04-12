@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+h3, h4, p {
+    margin: 0;
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #80808080;
+    backdrop-filter: blur(2px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    position: relative;
+    padding: 30px;
+    background-color: #fff;
+    width: 300px;
+}
+
+.modal-content .close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border-radius: 50%;
+    border: none;
+}
+
+.modal-content form {
+    display: grid;
+    gap: 5px;
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+
+/* 300px * 3 + 60px */
+.content {
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 50px calc((100% - 960px) / 2);
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    gap: 30px;
+    align-content: flex-start;
+    /* align-items: flex-start; */
+}
+
+.card {
+    border: 1px solid;
+    display: grid;
+    grid-template-columns: 120px auto;
+}
+.card .pic {
+    background-color: #808080;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.card .info {
+    padding: 5px;
+    display: grid;
+    gap: 5px;
+}
+h4 {
+    color: #808080;
+}
+.card .bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    align-items: flex-end;
+}
+.card .bottom>span:nth-of-type(2) {
+    text-transform: uppercase;
+}
+
+.add {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+}
