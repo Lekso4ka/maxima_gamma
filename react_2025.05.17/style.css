@@ -1,0 +1,10 @@
+body {
+    font: 20px sans-serif;
+}
+.bg {
+    background-color: cadetblue;
+}
+.self {
+    height: 50px;
+    border: 1px solid lightblue;
+}
